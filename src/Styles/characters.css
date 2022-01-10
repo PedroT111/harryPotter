@@ -1,0 +1,7 @@
+.conteiner{
+    width: 75%;
+    height: auto;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
