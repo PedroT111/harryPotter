@@ -1,0 +1,12 @@
+.conteiner-filter{
+    width: 80%;
+    margin: auto;
+}
+.filter-select{
+    width: 25%;
+}
+@media only screen and (max-width: 768px){
+    .filter-select{
+        width: 100%;
+    }
+}
