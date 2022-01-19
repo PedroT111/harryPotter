@@ -12,7 +12,7 @@ const Pagina = (props) => {
     }
     return(
         <>
-        <Pagination className="bg-light mr-4">
+        <Pagination className="position- absolute end-50">
             {
                 pageNumbers.map(page => 
                 <PaginationItem key={page}>
