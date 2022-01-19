@@ -1,5 +1,6 @@
 import React from "react";
 import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
+import '../Styles/pagination.css'
 
 const Pagina = (props) => {
     const {charactersPerPage, totalCharacters, paginate} = props;
@@ -11,17 +12,17 @@ const Pagina = (props) => {
 
     }
     return(
-        <>
-        <Pagination className="position- absolute end-50">
+        <div className="pagination row mt-2">
+        <Pagination>
             {
                 pageNumbers.map(page => 
-                <PaginationItem key={page}>
+                <PaginationItem key={page} className="item">
                     <PaginationLink onClick={() => paginate(page)} previous href="#">{page}</PaginationLink>
                 </PaginationItem>
                 )
             }
         </Pagination>
-        </>
+        </div>
         
     )
 }
