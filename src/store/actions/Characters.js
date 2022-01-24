@@ -15,7 +15,7 @@ export function getCharactersAction(){
             setTimeout(async () => {
                 const res = await axios.get(URL_CHARACTERS);
                 dispatch(getCharactersSuccessful(res.data));               
-            }, 6000)            
+            }, 2000)            
         }
         catch(e){
             dispatch(getCharactersError());
@@ -43,7 +43,9 @@ const getCharactersError = () => ({
 //Filter Characters
 export function filterCharactersAction(characters, house){
     return (dispatch) => {
-        dispatch(filterCharacters(characters, house));
+        setTimeout(() => {
+            dispatch(filterCharacters(characters, house));
+        }, 500)
     }
 }
 
@@ -51,6 +53,6 @@ const filterCharacters = (characters, house) => ({
     type: FILTER_CHARACTERS_BY_HOUSE,
     payload:{
         items: house === '' ? characters : characters.filter(h => h.casaDeHogwarts === house),
-        house: house
+        house: house,
     }
 })

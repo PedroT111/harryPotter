@@ -2,7 +2,7 @@ import{
     GET_CHARACTERS_SUCCESSFUL,
     GET_CHARACTERS_ERROR,
     GET_CHARACTERS_LOADING,
-    FILTER_CHARACTERS_BY_HOUSE
+    FILTER_CHARACTERS_BY_HOUSE,
 } from '../types/Characters';
 
 const initialState = {
@@ -10,7 +10,7 @@ const initialState = {
     error: null,
     loading: false,
     filterCharacters: [],
-    filter: ''
+    filter: '',
 };
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -43,7 +43,7 @@ export default function(state = initialState, action){
             return{
                 ...state,
                 filter: action.payload.house,
-                filterCharacters: action.payload.items
+                filterCharacters: action.payload.items,
             }
         }
         default:
