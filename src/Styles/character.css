@@ -1,10 +1,10 @@
-.card{
+.card-ch{
     width: 100%;
     height: 100%;
     transition: 0.3s;
     border: none;
 }
-.card:hover {
+.card-ch:hover {
     box-shadow: 0px 4px 16px 0px rgb(250, 245, 245);
 }
 

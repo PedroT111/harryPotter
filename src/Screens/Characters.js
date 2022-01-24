@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios from 'axios';
 import Character from "../Components/Character";
 import '../Styles/characters.css'
 import Pagina from '../Components/Pagination';
@@ -7,6 +6,7 @@ import Spinner from "../Components/Spinner";
 import { useDispatch, useSelector } from "react-redux";
 import { getCharactersAction } from "../store/actions/Characters";
 import Filter from "../Components/Filter";
+import { Link } from "react-router-dom";
 
 const Characters =  () => {
     const[currentPage, setCurrentPage] = useState(1);
@@ -33,11 +33,13 @@ const Characters =  () => {
             {
                 Characters === 0 ? console.log("No hay personajes") : (
                     CurrentCharacters.map(character => (
+                        <Link to={`/${character.id}`} className="text-decoration-none">
                         <div className="grid-item">
-                            <Character
-                            character ={character}
-                            key={character.id}/>
+                                <Character
+                                character ={character}
+                                key={character.id}/>
                         </div>
+                        </Link>
                     )                   
                 )
                 )

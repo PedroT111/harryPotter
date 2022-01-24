@@ -12,7 +12,7 @@ const Pagina = (props) => {
 
     }
     return(
-        <div className="pagination row mt-2">
+        <div className="pagination row mt-2 mb-4">
         <Pagination>
             {
                 pageNumbers.map(page => 
