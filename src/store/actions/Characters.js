@@ -6,7 +6,7 @@ import {
 } from '../types/Characters';
 import axios from 'axios';
 import Swal from 'sweetalert2';
-const URL_CHARACTERS = 'https://fedeperin-harry-potter-api.herokuapp.com/personajes/';
+const URL_CHARACTERS = 'https://harry-potter-api-en.onrender.com/characters';
 //Get characters
 export function getCharactersAction(){
     return async (dispatch) => {
@@ -52,7 +52,7 @@ export function filterCharactersAction(characters, house){
 const filterCharacters = (characters, house) => ({
     type: FILTER_CHARACTERS_BY_HOUSE,
     payload:{
-        items: house === '' ? characters : characters.filter(h => h.casaDeHogwarts === house),
+        items: house === '' ? characters : characters.filter(h => h.hogwartsHouse === house),
         house: house,
     }
 })

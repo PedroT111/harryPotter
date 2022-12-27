@@ -1,7 +1,7 @@
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import { GET_CHARACTER_BY_ID, GET_CHARACTER_BY_ID_ERROR, GET_CHARACTER_BY_ID_SUCCESSFUL} from '../types/Features';
-const URL_CHARACTERS = 'https://fedeperin-harry-potter-api.herokuapp.com/personajes/';
+const URL_CHARACTERS = 'https://harry-potter-api-en.onrender.com/characters/';
 export function getCharacterByIdAction(id){
     return async (dispatch) => {
         dispatch(getCharacter());
